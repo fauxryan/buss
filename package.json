@@ -17,7 +17,9 @@
     "postinstall": "npm rebuild node-sass",
     "start": "node app.js",
     "test": "nyc mocha --timeout=10000 --exit",
-    "lint": "eslint \"**/*.js\""
+    "lint": "eslint \"**/*.js\"",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.2",
@@ -46,7 +48,7 @@
     "jquery": "^3.4.1",
     "lastfm": "^0.9.3",
     "lob": "^6.0.5",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.12",
     "lusca": "^1.6.1",
     "mongoose": "^5.5.8",
     "morgan": "^1.9.1",
@@ -74,7 +76,8 @@
     "tumblr.js": "^2.0.0",
     "twilio": "^3.30.3",
     "twit": "^2.2.11",
-    "validator": "^10.11.0"
+    "validator": "^10.11.0",
+    "snyk": "^1.611.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
@@ -95,5 +98,6 @@
   "homepage": "https://github.com/fauxryan/buss#readme",
   "bugs": {
     "url": "https://github.com/fauxryan/buss/issues"
-  }
+  },
+  "snyk": true
 }
